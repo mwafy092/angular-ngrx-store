@@ -9,3 +9,7 @@ export const postsSelector = createSelector(
   selectFeature,
   (state) => state.posts.posts
 );
+export const errorSelector = createSelector(
+  selectFeature,
+  (state) => state.posts.error
+);

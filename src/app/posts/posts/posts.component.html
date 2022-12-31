@@ -1,7 +1,8 @@
 <div class="posts-container">
     <h1 class="title">New year posts</h1>
     <div *ngIf="isLoading$ | async">Loading...</div>
+    <div *ngIf="error$ | async as error">{{ error }}</div>
     <div *ngIf="!(isLoading$ | async)">
-        <p class="post" *ngFor="let post of posts">{{ post.title }}</p>
+        <p class="post" *ngFor="let post of posts$ | async">{{ post.title }}</p>
     </div>
 </div>

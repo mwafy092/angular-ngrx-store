@@ -22,6 +22,7 @@ import { PostsModule } from './posts/posts/posts.module';
       trace: true,
       traceLimit: 75,
     }),
+    EffectsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

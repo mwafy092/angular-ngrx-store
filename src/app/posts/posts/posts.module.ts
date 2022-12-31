@@ -4,10 +4,15 @@ import { PostsComponent } from './posts.component';
 import { PostsService } from '../posts.service';
 import { reducers } from '../store/reducers';
 import { StoreModule } from '@ngrx/store';
-
+import { EffectsModule } from '@ngrx/effects';
+import { PostsEffects } from '../store/effects';
 @NgModule({
   declarations: [PostsComponent],
-  imports: [CommonModule, StoreModule.forFeature('posts', reducers)],
+  imports: [
+    CommonModule,
+    StoreModule.forFeature('posts', reducers),
+    EffectsModule.forFeature([PostsEffects]),
+  ],
   providers: [PostsService],
   exports: [PostsComponent],
 })
