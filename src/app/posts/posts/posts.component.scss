@@ -1,0 +1,17 @@
+.posts-container {
+    width: 100vw;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    .title {
+        font-weight: 700;
+    }
+    .post {
+        background-color: #444;
+        color: #fff;
+        border-radius: 10px;
+        width: 50vw;
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
